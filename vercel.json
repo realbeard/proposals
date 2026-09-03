@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/pacificresort/:match*", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*" },
+    { "source": "/pacificresort", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/" }
+  ]
+}
