@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/pacificresort/:match*", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*" },
-    { "source": "/pacificresort", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/" }
+    { "source": "/pacificresort", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/" },
+    { "source": "/pacificresort-v3/:match*", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/:match*" },
+    { "source": "/pacificresort-v3", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/" }
   ]
 }
