@@ -1,10 +1,32 @@
 {
   "redirects": [
-    { "source": "/pacificresort", "destination": "/pacificresort/", "permanent": false },
-    { "source": "/pacificresort-v3", "destination": "/pacificresort-v3/", "permanent": false }
+    {
+      "source": "/pacificresort",
+      "destination": "/pacificresort/",
+      "permanent": false
+    },
+    {
+      "source": "/pacificresort-v3",
+      "destination": "/pacificresort-v3/",
+      "permanent": false
+    }
   ],
   "rewrites": [
-    { "source": "/pacificresort/:match*", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*" },
-    { "source": "/pacificresort-v3/:match*", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/:match*" }
+    {
+      "source": "/pacificresort/",
+      "destination": "https://pacific-resort-website-renewal-prop.vercel.app/index.html"
+    },
+    {
+      "source": "/pacificresort/:match*",
+      "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*"
+    },
+    {
+      "source": "/pacificresort-v3/",
+      "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/index.html"
+    },
+    {
+      "source": "/pacificresort-v3/:match*",
+      "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/:match*"
+    }
   ]
 }
