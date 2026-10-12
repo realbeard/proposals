@@ -11,7 +11,7 @@
     { "source": "/pacificresort/:match*", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*" },
     { "source": "/pacificresort-v3/", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/index.html" },
     { "source": "/pacificresort-v3/:match*", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/:match*" },
-    { "source": "/BestStart/", "destination": "https://BESTSTART-PRODUCTION-DOMAIN/index.html" },
-    { "source": "/BestStart/:match*", "destination": "https://BESTSTART-PRODUCTION-DOMAIN/:match*" }
+    { "source": "/BestStart/", "destination": "https://best-start-proposal-deck-09222fad-a.vercel.app/" },
+    { "source": "/BestStart/:match*", "destination": "https://best-start-proposal-deck-09222fad-a.vercel.app/:match*" }
   ]
 }
