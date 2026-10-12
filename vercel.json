@@ -1,32 +1,17 @@
 {
   "redirects": [
-    {
-      "source": "/pacificresort",
-      "destination": "/pacificresort/",
-      "permanent": false
-    },
-    {
-      "source": "/pacificresort-v3",
-      "destination": "/pacificresort-v3/",
-      "permanent": false
-    }
+    { "source": "/pacificresort", "destination": "/pacificresort/", "permanent": false },
+    { "source": "/pacificresort-v3", "destination": "/pacificresort-v3/", "permanent": false },
+    { "source": "/BestStart", "destination": "/BestStart/", "permanent": false },
+    { "source": "/beststart", "destination": "/BestStart/", "permanent": false },
+    { "source": "/beststart/", "destination": "/BestStart/", "permanent": false }
   ],
   "rewrites": [
-    {
-      "source": "/pacificresort/",
-      "destination": "https://pacific-resort-website-renewal-prop.vercel.app/index.html"
-    },
-    {
-      "source": "/pacificresort/:match*",
-      "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*"
-    },
-    {
-      "source": "/pacificresort-v3/",
-      "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/index.html"
-    },
-    {
-      "source": "/pacificresort-v3/:match*",
-      "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/:match*"
-    }
+    { "source": "/pacificresort/", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/index.html" },
+    { "source": "/pacificresort/:match*", "destination": "https://pacific-resort-website-renewal-prop.vercel.app/:match*" },
+    { "source": "/pacificresort-v3/", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/index.html" },
+    { "source": "/pacificresort-v3/:match*", "destination": "https://pacific-resort-proposal-v3-pauldigitalhothos-projects.vercel.app/:match*" },
+    { "source": "/BestStart/", "destination": "https://BESTSTART-PRODUCTION-DOMAIN/index.html" },
+    { "source": "/BestStart/:match*", "destination": "https://BESTSTART-PRODUCTION-DOMAIN/:match*" }
   ]
 }
