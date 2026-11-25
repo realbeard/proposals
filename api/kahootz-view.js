@@ -1,4 +1,4 @@
-// Posts a Slack alert when the password-protected Kahootz proposal is opened or left.
+// Posts a Slack alert when a password-protected proposal is opened or left. Shared by every proposal.
 // Needs the SLACK_WEBHOOK_URL environment variable. Does nothing if it is not set.
 const TOKEN = '646810e1efc62b6bc78aebd7';
 
@@ -27,15 +27,16 @@ module.exports = async (req, res) => {
   if (!b || b.k !== TOKEN) return res.status(204).end();
   const url = process.env.SLACK_WEBHOOK_URL;
   if (!url) return res.status(204).end();
+  const name = String(b.p || 'Proposal').replace(/[^\w .&'-]/g, '').slice(0, 40) || 'Proposal';
   const vid = String(b.v || '').replace(/[^a-z0-9]/gi, '').slice(0, 4);
   const n = Math.min(Math.max(parseInt(b.n, 10) || 1, 1), 999);
   const where = place(req.headers || {}), dev = parseUA((req.headers || {})['user-agent']);
   let text;
   if (b.e === 'open') {
-    text = ':eyes: *Kahootz proposal opened* (' + ordinal(n) + ' from this device)\n' + dev + ' · ' + where + ' · device ' + vid;
+    text = ':eyes: *' + name + ' proposal opened* (' + ordinal(n) + ' from this device)\n' + dev + ' · ' + where + ' · device ' + vid;
   } else if (b.e === 'leave') {
     const s = Math.min(Math.max(parseInt(b.s, 10) || 0, 0), 99), N = Math.min(Math.max(parseInt(b.N, 10) || 0, 0), 99);
-    text = ':wave: *Kahootz proposal viewer left* after ' + dur(Number(b.t) || 0) + ', reached slide ' + s + (N ? ' of ' + N : '') +
+    text = ':wave: *' + name + ' proposal viewer left* after ' + dur(Number(b.t) || 0) + ', reached slide ' + s + (N ? ' of ' + N : '') +
       '\n' + ordinal(n) + ' · ' + dev + ' · ' + where + ' · device ' + vid;
   } else return res.status(204).end();
   try {
